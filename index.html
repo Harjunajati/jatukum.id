@@ -2,93 +2,84 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JATUKUM.ID - Jasa Tugas Hukum</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8fb;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: #1a3c6c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .section {
-            padding: 30px;
-            text-align: center;
-        }
-        .section h2 {
-            color: #1a3c6c;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .service-card {
-            background: white;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            width: 250px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #1a3c6c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .contact {
-            margin-top: 20px;
-        }
-        a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JATUKUM.ID - Beranda</title>
+  <style>
+    body { font-family: Arial; margin: 0; background: #f4f8fb; }
+    header, footer { background: #1a3c6c; color: white; text-align: center; padding: 20px; }
+    nav { background: #003366; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 30px; text-align: center; }
+    #highlight { color: #003366; font-weight: bold; }
+    .button { background: #1a3c6c; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }
+    .button:hover { background: #004080; }
+  </style>
 </head>
 <body>
-
-<header>
+  <header>
     <h1>JATUKUM.ID</h1>
-    <p>Jasa Tugas Hukum Cepat & Profesional</p>
-</header>
+    <p>Jasa Tugas Kuliah Hukum Profesional & Cepat</p>
+  </header>
+  <nav>
+    <a href="#" onclick="navigate('home')">Beranda</a>
+    <a href="#" onclick="navigate('layanan')">Layanan</a>
+    <a href="#" onclick="navigate('testimoni')">Testimoni</a>
+    <a href="#" onclick="navigate('kontak')">Kontak</a>
+  </nav>
+  <section id="main">
+    <h2>Selamat Datang di <span id="highlight">JATUKUM.ID</span></h2>
+    <p>Kami membantu tugas kuliah hukum Anda: makalah, legal opinion, legal drafting, artikel ilmiah, dan lainnya.</p>
+    <p>Pelayanan cepat, anti telat, dan profesional!</p>
+    <button class="button" onclick="showMessage()">Lihat Promo Hari Ini</button>
+  </section>
+  <footer>
+    &copy; 2025 JATUKUM.ID – Semua Hak Dilindungi.
+  </footer>
 
-<div class="section">
-    <h2>Layanan Kami</h2>
-    <div class="services">
-        <div class="service-card">
-            <h3>Tugas Kuliah Hukum</h3>
-            <p>Mengerjakan berbagai tugas kuliah hukum dari berbagai mata kuliah.</p>
-        </div>
-        <div class="service-card">
-            <h3>Makalah & Legal Opinion</h3>
-            <p>Pembuatan makalah dan legal opinion sesuai standar akademik.</p>
-        </div>
-        <div class="service-card">
-            <h3>Revisi & Konsultasi</h3>
-            <p>Gratis revisi dan konsultasi untuk hasil terbaik.</p>
-        </div>
-    </div>
-</div>
+  <script>
+    function showMessage() {
+      alert("Promo: Diskon 10% untuk tugas makalah hari ini!");
+    }
 
-<div class="section contact">
-    <h2>Hubungi Kami</h2>
-    <p>WhatsApp: <a href="https://wa.me/6282174914712">0821-7491-4712</a></p>
-    <p>Instagram: <a href="https://instagram.com/jatukum.id">@jatukum.id</a></p>
-</div>
-
-<footer>
-    <p>&copy; 2025 JATUKUM.ID. All rights reserved.</p>
-</footer>
-
+    function navigate(page) {
+      let content = document.getElementById("main");
+      if (page === 'home') {
+        content.innerHTML = `
+          <h2>Selamat Datang di <span id="highlight">JATUKUM.ID</span></h2>
+          <p>Kami membantu tugas kuliah hukum Anda: makalah, legal opinion, legal drafting, artikel ilmiah, dan lainnya.</p>
+          <p>Pelayanan cepat, anti telat, dan profesional!</p>
+          <button class="button" onclick="showMessage()">Lihat Promo Hari Ini</button>
+        `;
+      } else if (page === 'layanan') {
+        content.innerHTML = `
+          <h2>Layanan Kami</h2>
+          <ul style="text-align: left; max-width: 600px; margin: auto;">
+            <li>✅ Tugas Kuliah Hukum</li>
+            <li>✅ Makalah & Paper</li>
+            <li>✅ Legal Opinion & Legal Drafting</li>
+            <li>✅ Artikel / Jurnal Ilmiah Hukum</li>
+            <li>✅ PPT Presentasi Kuliah</li>
+            <li>✅ KTI / Proposal Penelitian</li>
+            <li>✅ Layanan Revisi & Konsultasi</li>
+          </ul>
+        `;
+      } else if (page === 'testimoni') {
+        content.innerHTML = `
+          <h2>Testimoni Klien</h2>
+          <blockquote>“Makalahnya rapi, langsung ACC dosen. Terima kasih JATUKUM!” – Fira, FH UNY</blockquote>
+          <blockquote>“Nggak nyangka bisa dapet legal opinion dalam waktu 1 hari!” – Rizky, FH UI</blockquote>
+          <blockquote>“Sangat komunikatif dan hasilnya memuaskan!” – Sarah, FH UII</blockquote>
+        `;
+      } else if (page === 'kontak') {
+        content.innerHTML = `
+          <h2>Hubungi Kami</h2>
+          <p>📞 WhatsApp: <a href="https://wa.me/6282174914712">0821-7491-4712</a></p>
+          <p>📷 Instagram: <a href="https://instagram.com/jatukum.id">@jatukum.id</a></p>
+          <p>📧 Email: jatukum.id@gmail.com</p>
+        `;
+      }
+    }
+  </script>
 </body>
 </html>
