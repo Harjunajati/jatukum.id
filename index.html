@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JATIKUM.ID</title>
+  <title>JATUKUM.ID - Jasa Tugas Kuliah Hukum</title> <!-- Updated title -->
   <style>
     body {
       margin: 0;
@@ -14,11 +15,22 @@
     header {
       background-color: #0b3c5d;
       color: white;
-      padding: 20px;
+      padding: 30px 20px; /* Increased padding */
       text-align: center;
     }
 
-    .services {
+    header h1 {
+        margin-bottom: 10px; /* Space between title and tagline */
+    }
+
+    .section-title { /* Added a class for section titles */
+        text-align: center;
+        color: #0b3c5d;
+        margin-bottom: 30px;
+        width: 100%; /* Ensure title takes full width in flex container */
+    }
+
+    .services, .benefits { /* Combined styles for similar sections */
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -26,10 +38,10 @@
       background-color: #f5f5f5;
     }
 
-    .service-card {
+    .service-card, .benefit-card { /* Combined styles for cards */
       background: #fff;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin: 15px;
       padding: 20px;
       width: 250px;
@@ -38,7 +50,8 @@
 
     .contact {
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px; /* Increased padding */
+      background-color: #fff; /* Ensure white background */
     }
 
     .contact a {
@@ -47,43 +60,89 @@
       font-weight: bold;
     }
 
+    .contact p {
+        margin: 10px 0; /* Space between contact lines */
+    }
+
     footer {
       background-color: #0b3c5d;
       color: white;
       text-align: center;
       padding: 15px;
+      margin-top: 20px; /* Space above footer */
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>JATIKUM.ID</h1>
-    <p>Jasa Joki Hukum Cepat & Profesional</p>
+    <h1>JATUKUM.ID</h1>
+    <p>Solusi Cepat dan Tepat untuk Bantu Semua Tugas Kuliah Hukum Kamu! 📚⚖</p> <!-- Updated tagline -->
   </header>
 
   <section class="services">
+    <h2 class="section-title">Layanan Kami</h2> <!-- Added section title -->
     <div class="service-card">
-      <h3>Tugas Kuliah Hukum</h3>
-      <p>Mengerjakan berbagai tugas kuliah hukum dari berbagai mata kuliah.</p>
+      <h3>Makalah Hukum</h3>
+      <p>Pembuatan makalah hukum sesuai standar akademik.</p>
     </div>
     <div class="service-card">
-      <h3>Makalah & Legal Opinion</h3>
-      <p>Pembuatan makalah dan legal opinion sesuai standar akademik.</p>
+      <h3>Legal Opinion</h3>
+      <p>Penyusunan legal opinion yang komprehensif.</p>
     </div>
     <div class="service-card">
-      <h3>Revisi & Konsultasi</h3>
-      <p>Gratis revisi dan konsultasi untuk hasil terbaik.</p>
+      <h3>Legal Drafting</h3>
+      <p>Layanan penyusunan dokumen hukum.</p>
+    </div>
+    <div class="service-card">
+      <h3>Tugas Hukum Lainnya</h3>
+      <p>Mengerjakan tugas Hukum Perdata, Pidana, HTN, HI, dll.</p>
+    </div>
+    <div class="service-card">
+      <h3>PPT Kuliah & Paper</h3>
+      <p>Pembuatan presentasi dan paper kuliah.</p>
+    </div>
+    <div class="service-card">
+      <h3>KTI / Artikel Ilmiah</h3>
+      <p>Bantuan penulisan Karya Tulis Ilmiah dan artikel.</p>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <h2 class="section-title">Keunggulan Kami</h2> <!-- Added section title -->
+    <div class="benefit-card">
+      <h3>Anti Telat</h3>
+      <p>Penyelesaian tugas tepat waktu.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Gratis Revisi</h3>
+      <p>Revisi tanpa biaya tambahan.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Rapi & Terstruktur</h3>
+      <p>Hasil kerja yang sistematis dan mudah dipahami.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Bisa Konsultasi</h3>
+      <p>Layanan konsultasi untuk kebutuhan tugas Anda.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Tim Profesional</h3>
+      <p>Dikerjakan oleh tim yang berpengalaman di bidang hukum.</p>
     </div>
   </section>
 
   <section class="contact">
-    <h2>Hubungi Kami</h2>
-    <p>WhatsApp: <a href="https://wa.me/6282174914712">0821-7491-4712</a></p>
-    <p>Instagram: <a href="https://instagram.com/jatukum.id">@jatukum.id</a></p>
+    <h2 class="section-title">Hubungi Kami</h2> <!-- Added section title -->
+    <p>Langsung chat sekarang!</p>
+    <p>WhatsApp: <a href="https://wa.me/6282174914712">0821-7491-4712</a></p> <!-- Updated WA -->
+    <p>Instagram: <a href="https://instagram.com/jatukum.id">@jatukum.id</a></p> <!-- Updated IG -->
+    <p style="margin-top: 20px;">Yuk, serahkan tugasmu ke ahlinya! Joki Cepat dan Terpercaya</p> <!-- Added slogan -->
   </section>
 
   <footer>
-    <p>&copy; 2025 JATIKUM.ID. All rights reserved.</p>
+    <p>&copy; 2025 JATUKUM.ID. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
