@@ -1,59 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JATUKUM.ID - Beranda</title>
-  <style>
-    body { font-family: Arial; margin: 0; background: #f4f8fb; }
-    header, footer { background: #1a3c6c; color: white; text-align: center; padding: 20px; }
-    nav { background: #003366; text-align: center; padding: 10px; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 30px; text-align: center; }
-    #highlight { color: #003366; font-weight: bold; }
-    .button { background: #1a3c6c; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }
-    .button:hover { background: #004080; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>JATUKUM.ID</h1>
-    <p>Jasa Tugas Kuliah Hukum Profesional & Cepat</p>
-  </header>
-  <nav>
-    <a href="#" onclick="navigate('home')">Beranda</a>
-    <a href="#" onclick="navigate('layanan')">Layanan</a>
-    <a href="#" onclick="navigate('testimoni')">Testimoni</a>
-    <a href="#" onclick="navigate('kontak')">Kontak</a>
-  </nav>
-  <section id="main">
-    <h2>Selamat Datang di <span id="highlight">JATUKUM.ID</span></h2>
-    <p>Kami membantu tugas kuliah hukum Anda: makalah, legal opinion, legal drafting, artikel ilmiah, dan lainnya.</p>
-    <p>Pelayanan cepat, anti telat, dan profesional!</p>
-    <button class="button" onclick="showMessage()">Lihat Promo Hari Ini</button>
-  </section>
-  <footer>
-    &copy; 2025 JATUKUM.ID – Semua Hak Dilindungi.
-  </footer>
-
-  <script>
-    function showMessage() {
-      alert("Promo: Diskon 10% untuk tugas makalah hari ini!");
-    }
-
-    function navigate(page) {
-      let content = document.getElementById("main");
-      if (page === 'home') {
-        content.innerHTML = `
-          <h2>Selamat Datang di <span id="highlight">JATUKUM.ID</span></h2>
-          <p>Kami membantu tugas kuliah hukum Anda: makalah, legal opinion, legal drafting, artikel ilmiah, dan lainnya.</p>
-          <p>Pelayanan cepat, anti telat, dan profesional!</p>
-          <button class="button" onclick="showMessage()">Lihat Promo Hari Ini</button>
-        `;
-      } else if (page === 'layanan') {
-        content.innerHTML = `
-<div class="section">
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -159,24 +103,5 @@
     <p>&copy; 2025 JATUKUM.ID. All rights reserved.</p>
   </footer>
 
-</body>
-</html>
-      } else if (page === 'testimoni') {
-        content.innerHTML = `
-          <h2>Testimoni Klien</h2>
-          <blockquote>“Makalahnya rapi, langsung ACC dosen. Terima kasih JATUKUM!” – F, FH UII</blockquote>
-          <blockquote>“Nggak nyangka bisa dapet legal opinion dalam waktu 2 hari!” – R, FH UII</blockquote>
-          <blockquote>“Sangat komunikatif, terimakasih kak.. hasilnya memuaskan!” – S, FH UII</blockquote>
-        `;
-      } else if (page === 'kontak') {
-        content.innerHTML = `
-          <h2>Hubungi Kami</h2>
-          <p>📞 WhatsApp: <a href="https://wa.me/6282174914712">0821-7491-4712</a></p>
-          <p>📷 Instagram: <a href="https://instagram.com/jatukum.id">@jatukum.id</a></p>
-          <p>📧 Email: jatukum.id@gmail.com</p>
-        `;
-      }
-    }
-  </script>
 </body>
 </html>
